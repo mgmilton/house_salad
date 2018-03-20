@@ -17,6 +17,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'faraday'
 gem 'bootstrap-sass'
 gem 'figaro'
+gem 'json'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -31,3 +32,7 @@ group :development do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+group :test do
+  gem 'webmock'
+end
