@@ -1,0 +1,11 @@
+<h2><%= @house_members.count %> results </h2>
+<div>
+  <% @house_members.each do |member| %>
+    <ul class="member">
+      <li class="name"><%= member.name %></li>
+      <li class="role"><%= member.role %></li>
+      <li class="party"><%= member.party %></li>
+      <li class="district"><%= member.district %></li>
+    </ul>
+  <% end %>
+</div>
