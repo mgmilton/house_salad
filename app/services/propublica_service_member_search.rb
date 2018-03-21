@@ -19,6 +19,8 @@ class PropublicaServiceMemberSearch
     end
 
     def headers
-      {'X-API-Key' => ENV["propublica_key"]}
+      {
+        'X-API-Key' => ENV["propublica_key"]
+      }
     end
 end
