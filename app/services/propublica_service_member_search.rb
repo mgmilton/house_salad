@@ -4,14 +4,15 @@ class PropublicaServiceMemberSearch
   end
 
   def run
-    JSON.parse(response.body, symbolize_names: true)
+    get_json("/congress/v1/members/house/#{state}/current.json")
   end
 
   private
     attr_reader :state
 
-    def response
-      conn.get("/congress/v1/members/house/#{state}/current.json")
+    def get_json(url)
+      response = conn.get(url)
+      JSON.parse(response.body, symbolize_names: true)
     end
 
     def conn
