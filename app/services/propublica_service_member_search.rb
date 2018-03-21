@@ -9,6 +9,7 @@ class PropublicaServiceMemberSearch
 
   private
     attr_reader :state
+    
     def response
       conn.get
     end
